@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>河北健康码</title>
+</head>
+<style>
+    
+    .d1{
+        background-color: aqua;
+        width:1450px;
+        height:3000px;
+     }
+
+    .d2{
+        background-image: url("g1.jpg");
+        width: 100%;
+        height: 100%;
+    }
+    .sj{position:relative; top:33%;left:25%;font-size:70px}
+    .sb{position:relative; top:34%;left:27%;}
+    .hssj{position:relative; top:46%;left:7%;}
+    .yx{position:relative; top:35%;left:12%;font-size:70px;color: floralwhite;}
+    .h24{position:relative; top:36%;left:11%;font-size:42px;color: floralwhite;}
+    .s1{font-size: 114px;}
+    .s2{font-size: 44px;}
+    .s3{font-size: 55px;}
+    .xcm{position:relative; top:26%;left:50%;}
+    .nm{font-size: 58px;font-family:;position:relative;top:23%;left:9%;}
+</style>
+<body>
+    <script>
+        Date.prototype.format = function (fmt) {
+            var o = {
+                "y+": this.getFullYear, //年
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds() //秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+        setInterval("document.getElementById('d21').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+        setInterval("document.getElementById('year').innerHTML = (new Date()).format('yyyy-MM-dd'+'  '+'00.07.21');", 1000);
+    </script>
+    <div class="d1">
+        <div class="d2">
+            <div class="nm"><span><strong>您好,张*</strong></span></div>
+            <div class="sj"><div id="d21"></div></div>
+            <div class="sb"><img src="ybb2.gif"></div>
+            <div class="hssj">
+                <img src="72.png">  
+            </div>
+            <div class="yx"><span class="s1">24</span>&nbsp<span class="s2">小时</span>&nbsp<span class="s3">阴性</span></div>
+            <div class="h24"><div id="year"> </div></div>
+            <div class="xcm"><a href="https://kind-snyder-68dad8.netlify.app/#13822344126&%E6%B2%B3%E5%8C%97%E7%9C%81%E9%82%A2%E5%8F%B0%E5%B8%82" target="_blank"><img src="223.gif"></a></div>
+        </div>
+    </div>
+</body>
+</html>
